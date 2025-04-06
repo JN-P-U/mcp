@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+      "mcp-tavily": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@smithery/cli@latest",
+          "run",
+          "mcp-tavily",
+          "--config",
+          "{\"apiKey\":\"{API_KEY}\"}"
+        ]
+      }
+    }
+  }
