@@ -46,15 +46,17 @@ def get_api_key():
     """
     등록된 DART API 키를 가져옵니다.
     """
-    config_file = os.path.join(os.path.expanduser("~/.mcp"), "dart_config.json")
+    # config_file = os.path.join(os.path.expanduser("~/.mcp"), "dart_config.json")
 
-    if not os.path.exists(config_file):
-        return None
+    # if not os.path.exists(config_file):
+    #     return None
 
-    with open(config_file, "r") as f:
-        config = json.load(f)
+    # with open(config_file, "r") as f:
+    #     config = json.load(f)
 
-    return config.get("api_key")
+    # return config.get("api_key")
+    api_key = os.getenv("DART_API_KEY")
+    return api_key
 
 
 def fetch_corp_codes(api_key):
